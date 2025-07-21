@@ -132,10 +132,136 @@ void pattern11()
     }
 }
 
+void pattern11(int num)
+{
+    int a=1;
+    for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            cout<<a<<" ";
+            a=a+1;
+        }
+        cout<<endl;
+    }
+}
+void pattern12(int num)
+{
+    for(int i=0;i<num;i++)
+    {
+        char a='A';
+        for(int j=0;j<=i;j++)
+        {
+            cout<<a<<" ";
+            a=a+1;
+        }
+        cout<<endl;
+    }
+}
+void pattern13(int num)
+{
+    for(int i=0;i<num;i++)
+    {
+        char a='A';
+        for(int j=0;j<=num-i-1;j++)
+        {
+            cout<<a<<" ";
+            a=a+1;
+        }
+        cout<<endl;
+    }
+}
+void pattern14(int num)
+{
+    char a='A';
+    for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            cout<<a<<" ";
+        }
+        a=a+1;
+        cout<<endl;
+    }
+}
+
+void pattern15(int num)
+{
+    for(int i=0;i<num;i++)
+    {
+        char a='E';
+        for(int j=0;j<=i;j++)
+        {
+            cout<<a<<" ";
+            a=a-1;
+        }
+        cout<<endl;
+    }
+}
+
+void pattern16(int num)
+{
+    for(int i=1;i<num;i++)
+    {
+        int a=1;
+        char c='A';
+        for(int j=1;j<num-i;j++) // space
+        {
+            cout<<"_";
+        }
+        for(int j=1;j<=2*i-1;j++) //number
+        {
+            int breakpoint = (2*i+1)/2;
+            cout<<a;     
+            if(j<breakpoint) a++;
+            else a--;
+        }
+        for(int j=1;j<num-i;j++) //space
+        {
+            cout<<"_";
+        }
+        cout<<endl;
+    }
+
+}
+
+void pattern17(int num)
+{
+    int stars,space;
+    for(int i=0;i<2*num;i++) 
+    {
+        if(i<num) 
+        {
+            stars=(num-i);
+            space=2*i;
+        }
+        else
+        {
+            stars=(i-num+1);
+            space=(2*num-2*stars);
+        }
+        for(int j=0;j<stars;j++) //stars
+        {
+         cout<<"*";   
+        }
+        for(int j=0;j<space;j++) //space
+        {
+            cout<<" ";
+        }
+        for(int j=0;j<stars;j++) //stars
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+
+
+
 int main()
 {
     int num = 5;
     // pattern10(num);
-    pattern11();
+    pattern17(num);
     return 0;
 }
