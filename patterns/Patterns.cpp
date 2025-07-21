@@ -242,26 +242,56 @@ void pattern17(int num)
         }
         for(int j=0;j<stars;j++) //stars
         {
-         cout<<"*";   
+         cout<<"* ";   
         }
         for(int j=0;j<space;j++) //space
         {
-            cout<<" ";
+            cout<<"  ";
         }
         for(int j=0;j<stars;j++) //stars
         {
-            cout<<"*";
+            cout<<"* ";
         }
         cout<<endl;
     }
 }
 
+void pattern18(int num)
+{
+    int stars,space;   
+    for(int i=1;i<2*num;i++)
+    {   
+        if(i<=num)
+        {
+            stars=i;
+            space=2*(num-i);    
+        }
+        else
+        {   
+            stars=2*num-i;
+            space=2*(i-num);          
+        }
+        for(int j=1;j<=stars;j++) //stars
+        {
+            cout<<"* ";
+        }
+        for(int j=1;j<=space;j++)
+        {
+            cout<<"  ";
+        }
+        for(int j=1;j<=stars;j++) //stars
+        {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
 
+}
 
 int main()
 {
     int num = 5;
     // pattern10(num);
-    pattern17(num);
+    pattern18(num);
     return 0;
 }
