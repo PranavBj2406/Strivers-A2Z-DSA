@@ -288,6 +288,19 @@ void pattern18(int num)
 
 }
 
+void pattern19(int num)
+{
+    for(int i=0;i<num;i++)
+    {
+        for (int j = 0; i < num; j++)
+        {    
+            
+            /* code */
+        }
+        
+    }
+}
+
 int main()
 {
     int num = 5;
