@@ -19,7 +19,7 @@ int main()
     }
     // selection algo//
     // find min in the array swap //
-    for(int i=0;i<n-2;i++)
+    for(int i=0;i<n-1;i++) 
     {
         int min=i;
         for(int j=i;j<n;j++)  // jjob of the inner loop is to find the min element 
