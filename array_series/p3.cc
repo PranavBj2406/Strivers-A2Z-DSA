@@ -1,6 +1,7 @@
 // rotation of the elements to the left
 
 #include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 vector<int> rotation(vector<int> &arr,int rotation_count)
@@ -15,8 +16,19 @@ vector<int> rotation(vector<int> &arr,int rotation_count)
             arr[i]=arr[i+1];
         }
         arr[n-1]=temp;
+        k++;
     }
     return arr;
+}
+
+void rotation(int arr[],int n,int d)
+{
+    reverse(arr,arr+d);  // ---> O(d);
+    reverse(arr+d,arr+n);// ---> O(n-d);
+    reverse(arr,arr+n); // --> O(n);
+    //this is the optimal approach  
+    // TC ---> 0(2N);
+    // SC --> 0(1)
 }
 
 int main()
