@@ -52,3 +52,15 @@ public:
     } 
     }
 };
+
+// another logic to push 0s to end .. more rfficient then the above
+
+
+int j=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=0){
+                swap(nums[i],nums[j]);
+                j++;
+            }
+        }
+        return nums;
