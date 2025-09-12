@@ -64,3 +64,14 @@ public:
         return i+1;
     }
 };
+
+
+
+// new method
+
+vector<int> nums = {1, 1, 2, 2, 3};
+for (int i = 0; i < nums.size(); i++) {
+    if (i > 0 && nums[i] == nums[i-1]) 
+        continue;   // skip duplicates
+    cout << nums[i] << " ";
+}
