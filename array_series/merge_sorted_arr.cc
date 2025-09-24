@@ -1,27 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-vector<int> mergearr(vector<int> arr1,vector<int> arr2)
+//optimal solution logic
+void merge_sorted_arrays(vector<int> arr1,vector<int> arr2)
 {
-    int n1=arr1.size();
-    int n2=arr2.size();
-    int Asize = n1+n2;
-    int start1=0,start2=0;
-    vector<int> ans;
-    while(left<m)
-
-    for(int i=0;i<n1;i++)
+    int left=arr1.size()-1;
+    int right=0;
+    int n=arr1.size();
+    int m=arr2.size();
+    while(left>=0 && right<m)
     {
-        arr1[i]=ans[i];
+        if(arr1[left]>arr2[right])
+        {
+            swap(arr1[left],arr2[right]);
+            left--;
+            right++;
+        }
+        else
+        {
+            break;
+        }
     }
-    for(int i=0;i<n2;i++)
-    {
-        arr2[i]=ans[i];
-    }
+    sort(arr1.begin(),arr1.end());
+    sort(arr2.begin(),arr2.end());
 }
 
 int main()
 {
-    
 return 0;
 }
