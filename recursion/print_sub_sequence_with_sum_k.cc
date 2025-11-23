@@ -1,26 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-void print_subsequence(int ind, vector<int> arr, vector<int> ds, int sum)
+int print_subsequence(int ind, vector<int> arr, vector<int> ds, int sum)
 {
     if (ind == arr.size()) //--> base condition
     {
         if (sum == 2)
         {
-            for (auto it : ds)
-            {
-                cout << it;
-            }
-            cout << " sum = " << sum << endl;
+            return 1;
         }
-        return;
+        else{
+
+            return 0 ;
+        }
     }
 
     ds.push_back(arr[ind]);
     sum = sum + arr[ind];
-    print_subsequence(ind + 1, arr, ds, sum);
+    int left = print_subsequence(ind + 1, arr, ds, sum);
     ds.pop_back();
     sum = sum - arr[ind];
-    print_subsequence(ind + 1, arr, ds, sum);
+    int right = print_subsequence(ind + 1, arr, ds, sum);
+    return left+right;
 }
 
 int main()
@@ -29,6 +29,7 @@ int main()
     int sum = 0;
     vector<int> ds;
     vector<int> arr = {1, 2, 1};
-    print_subsequence(ind, arr, ds, sum);
+    int output = print_subsequence(ind, arr, ds, sum);
+    cout<<output;
     return 0;
 }
