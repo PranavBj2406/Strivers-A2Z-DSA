@@ -19,7 +19,7 @@ int power_2(int x,int n)
     }
     return num;
 }
-// optimized solution for power O(logn)
+// optimized solution for power O(logn) --> iteractive approach over recursive coz of space complexity - O(N)
 int power_3(int x,int n)  // format is x^n  
 {
     int ans=1;
