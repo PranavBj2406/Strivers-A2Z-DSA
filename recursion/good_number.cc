@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int pow(int x,int n)  // x will be either 4 or 5 and n will be odd or even
+int pow(int x,int n)  // x will be either 4 or 5 and n will be odd or even // also use long long instead of int
 {
     int result=1;
     while(n>0){
@@ -16,7 +16,7 @@ int pow(int x,int n)  // x will be either 4 or 5 and n will be odd or even
     return result;
 }
 
-int good_number(int n)
+int good_number(int n) // also use long long instead of int
 {
     int output=1;
     int odd,even;
