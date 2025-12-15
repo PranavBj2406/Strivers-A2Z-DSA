@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int minmax(vector<int>& arr, int k) {
+int minmax(vector<int>& arr, int k) {  // not the optimal solution as optimal solution uses monotnic queue to solve
     int n = arr.size();
     vector<vector<int>> result;
     vector<int> min_ele;
@@ -26,4 +26,4 @@ int main()
     max_ele=minmax(arr,k);
     cout<<max_ele;
 return 0;
-}
+} 
