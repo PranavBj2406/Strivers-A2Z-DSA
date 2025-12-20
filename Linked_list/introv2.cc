@@ -12,25 +12,24 @@ class Node{
     }
 };
 
-Node *create(int n,int &size) // maintining nly head
+pair<Node*,Node*> create(int n) // maintining nly head
 {
     int data;           //data of the node
-    Node *temp,*mover;  // temp ptr for node cretaed , mover indication
+    Node *temp,*mover,*tail;  // temp ptr for node cretaed , mover indication
     cout<<"enter the data"<<endl;
     cin>>data;
     Node *head=new Node(data,nullptr); // create head assign data
-    size++;
     mover=head; // mover is intially head;
     for(int i=0;i<n-1;i++)
     {
         cout<<"Enter the values of the data"<<endl;
         cin>>data;
         temp=new Node(data,nullptr);
-        size++;
         mover->next=temp;
         mover=temp;
     }
-   return head;
+    tail=mover; // tail 
+   return {head,tail};
 }
 
 void traversal(Node *head) 
@@ -43,60 +42,40 @@ void traversal(Node *head)
     }
 }
 
-Node *insert(int index,int data,Node *head,int &size)  //always pass the nodes as aparams
+Node *insert(int index,int data,Node *head,Node *tail) //always pass the nodes as aparams
 {
     Node *temp,*mover;
     mover=head;  
     int count=0;
-    if(size<index || index<0)
-    {
-        cout<<"Invalid index"<<endl;
-        return head;
-    }
     if(head==nullptr) //no nodes
-    { 
+    {
         cout<<"The list is empty"<<endl;
         temp=new Node(data,nullptr);
         head=temp;
-        size++;
         return head;
     }
-    if(index==0) // insert at satrt
+    if(count==index) // insert at satrt
     {
         temp=new Node(data,nullptr);
         temp->next=head;
-        head=temp;
-        size++;
-        return head;       
+        head=temp;     
+        return head;  
     }
     while(count<index-1) // insert at index
     {
         mover=mover->next;
         count++;
-    }
+    }   
     temp=new Node(data,mover->next);
     mover->next=temp;
-    size++;
     return head;
 }
 
-Node *insertatend(int data,int &size,Node *head)
-{
-    Node *mover=head;
-    while(mover->next!=nullptr)
-    {
-        mover=mover->next;
-    }
-    Node *temp=new Node(data,nullptr);
-    mover->next=temp;
-    mover=temp;
-}
-
-
 int main()
 {
-    int size=0;
-    Node *head=create(5,size);
+    int n;
+    cin>>n;
+    Node *head,*tail;
     traversal(head);
 return 0;
 }
