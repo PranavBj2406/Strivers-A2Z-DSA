@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// songle_path
+// songle_path 
 
 bool solve(int row, int col, vector<vector<int>>& maze, vector<vector<int>>& output){
     int n=maze.size();
