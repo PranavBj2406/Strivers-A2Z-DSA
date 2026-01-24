@@ -114,3 +114,48 @@ int main()
     }
 return 0;
 }
+
+// logic for solving rat_in_maze
+
+
+// enter cell (row, col)
+
+// check safety:
+//     if out of bounds
+//     or blocked
+//     or already visited
+//         return
+// kotlin
+// Copy code
+// mark this cell as visited
+// kotlin
+// Copy code
+// if this cell is destination:
+//     store current path string
+//     unmark this cell
+//     return
+// sql
+// Copy code
+// try Down:
+//     add 'D'
+//     go to (row+1, col)
+//     remove 'D'
+
+// try Left:
+//     add 'L'
+//     go to (row, col-1)
+//     remove 'L'
+
+// try Right:
+//     add 'R'
+//     go to (row, col+1)
+//     remove 'R'
+
+// try Up:
+//     add 'U'
+//     go to (row-1, col)
+//     remove 'U'
+// kotlin
+// Copy code
+// unmark this cell
+// return to previous cell
