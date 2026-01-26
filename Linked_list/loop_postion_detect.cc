@@ -47,6 +47,7 @@ public:
         ListNode *slow=head;
         ListNode *fast=head;
         bool flag=false;
+        
         while(slow && fast && fast->next)
         {
             slow=slow->next;
@@ -77,3 +78,24 @@ public:
         return nullptr;
     }
 };
+
+
+// Loop length using slow–fast pointers (in words)
+
+// First, detect loop using slow and fast pointers
+
+// Slow moves 1 step
+
+// Fast moves 2 steps
+
+// When slow == fast → loop detected
+
+// Then, keep one pointer fixed (say fast)
+
+// Move the other pointer (say slow) one step at a time
+
+// Start a counter = 1
+
+// Increment counter for each move
+
+// Stop when slow reaches fast again
