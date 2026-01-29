@@ -45,8 +45,7 @@ public:
     for(i=j+1;i<nums.size();i++)
     {
         if(nums[i]!=0)
-        {
-            swap(nums[j],nums[i]);
+                    swap(nums[j],nums[i]);
             j++;
         }
     } 
