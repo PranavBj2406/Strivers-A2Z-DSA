@@ -30,7 +30,7 @@ public:
     }
 };
 
-// optimal solution 
+// optimal solution use two stack one for val and another for min val
 class MinStack {
 public:
     stack<int> value;
