@@ -18,26 +18,25 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
+bool sort2(vector<int> &a, vector<int> &b)
+{
+    return a[1]<b[1];
+}
+
+
 int main()
 {
-    vector<int> arr={1,1,0,1,1,1};  
-    int count=0,max_count=0;
-    int i=0;
+    vector<vector<int>> arr={{1,2},{2,3},{3,4},{1,3}};
+    sort(arr.begin(),arr.end(),sort2);
     for(int i=0;i<arr.size();i++)
     {
-        if(arr[i]==1)
+        for(int j=0;j<arr[i].size();j++)
         {
-            count++;
-            if(max_count<count)
-            {
-                max_count++;
-            }
+            cout<<arr[i][j];
         }
-        else
-        {
-            count=0;
-        }
+        cout<<endl;
     }
-    cout<<max_count;
+
 return 0;
 }
