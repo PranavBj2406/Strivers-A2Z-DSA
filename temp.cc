@@ -27,16 +27,17 @@ bool sort2(vector<int> &a, vector<int> &b)
 
 int main()
 {
-    vector<vector<int>> arr={{1,2},{2,3},{3,4},{1,3}};
-    sort(arr.begin(),arr.end(),sort2);
-    for(int i=0;i<arr.size();i++)
-    {
-        for(int j=0;j<arr[i].size();j++)
-        {
-            cout<<arr[i][j];
-        }
-        cout<<endl;
-    }
+    // vector<vector<int>> arr={{1,2},{2,3},{3,4},{1,3}};
+    // sort(arr.begin(),arr.end(),sort2);
+    // for(int i=0;i<arr.size();i++)
+    // {
+    //     for(int j=0;j<arr[i].size();j++)
+    //     {
+    //         cout<<arr[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    cout<<char(48);
 
 return 0;
 }
