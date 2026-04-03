@@ -81,7 +81,28 @@ void Preorder(TreeNode *root)
     }
 }
 
-
+vector<int> iterative_inorder(TreeNode *root)
+{
+    stack<TreeNode *> st;
+    TreeNode *temp=root;
+    vector<int> ans;
+    while(!st.empty())
+    {
+       if(temp!=nullptr)
+       {
+        st.push(temp);
+        temp=temp->left;
+       }
+       else
+       {
+        temp=st.top();
+        st.pop();
+        ans.push_back(temp->data);
+        temp=temp->right;
+       }
+    }
+    return ans;
+}
 
 
 
