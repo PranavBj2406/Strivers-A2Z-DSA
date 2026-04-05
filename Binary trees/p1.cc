@@ -104,6 +104,32 @@ vector<int> iterative_inorder(TreeNode *root)
     return ans;
 }
 
+vector<int> iterative_postorder(TreeNode *root)
+{
+    stack<TreeNode *> st1;
+    stack<TreeNode *> st2;
+    vector<int> ans;
+    st1.push(root);
+    while(!st1.empty())
+    {
+        st2.push(st1.top());
+        st1.pop();
+        if(st2.top()->left!=nullptr)
+        {
+            st1.push(st2.top()->left);
+        }
+        if(st2.top()->right!=nullptr)
+        {
+            st1.push(st2.top()->right);
+        }
+    }
+    while(!st2.empty()){
+        ans.push_back(st2.top()->data);
+        st2.pop();
+    }
+    return ans;
+}
+
 
 
 
