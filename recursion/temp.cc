@@ -31,23 +31,29 @@ void Print_Char_reverse(char c)
     cout<<c;
 }
 
-int sum_N_number(int N)
+void reverse1(vector<int> &arr,int p,int q)
 {
-    if(N-1==0)
+    if(p>=q)
     {
-        return N;
+        return;
     }
-    else{
-        return N + sum_N_number(N-1);
-    }
+    reverse1(arr,p+1,q-1);
+    swap(arr[p],arr[q]);
 }
+
+void palindrom_check()
+{
+    
+}
+
+
 
 int main()
 {
     // char c='E';
     // Print_Char_reverse(c);
     int n=5;
-    int ans=sum_N_number(5);
+    int ans=sum_n(5);
     cout<<ans;
 return 0;
 }

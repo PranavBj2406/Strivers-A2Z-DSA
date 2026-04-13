@@ -16,7 +16,7 @@ int print_subsequence(int ind, vector<int> arr, vector<int> ds, int sum)
 
     ds.push_back(arr[ind]);
     sum = sum + arr[ind];
-    int left = print_subsequence(ind + 1, arr, ds, sum);
+    int left = print_subsequence(ind + 2, arr, ds, sum);
     ds.pop_back();
     sum = sum - arr[ind];
     int right = print_subsequence(ind + 1, arr, ds, sum);

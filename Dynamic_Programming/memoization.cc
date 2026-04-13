@@ -25,8 +25,6 @@ int fib(int n)
    return prev;
 }
 
-
-
 int main()
 {
     vector<int> arr(5,-1);
