@@ -36,7 +36,7 @@ vector<int> union_array(vector<int> arr1,vector<int> arr2)
             {
                 union1.push_back(arr2[j]);
                 j++;
-            }
+            } 
     }
 
     while (i<n1)
